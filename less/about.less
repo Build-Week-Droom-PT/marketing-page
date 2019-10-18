@@ -1,0 +1,59 @@
+.aboutApp {
+    background-color: @lightOrange;
+    padding: 10px;
+
+    .aboutTextBox {
+        padding: 10px;
+
+        .aboutTitle {
+            h2 {
+                font-family: @font-Muli;
+                font-size: 18px;
+            
+                .fa {
+                    float: right;
+                }
+            }
+
+            
+        }
+
+        p {
+            font-family: @font-Muli;
+            font-size: 14px;
+        }
+
+        ul {
+            list-style-position: inside;
+
+            li {
+                font-family: @font-Muli;
+                font-size: 14px;
+            }
+        }
+    }
+
+
+    .appImgs {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+
+        :-webkit-scrollbar {
+            display: none;
+        }
+
+        .about {
+            display: inline-block;
+            /* width: 24%; for desktop*/
+            width: 45%;
+            margin-right: 5px;
+
+
+            img {
+                width: 100%;
+                border-radius: 5%;
+            }
+        }
+    }
+}
