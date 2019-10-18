@@ -10,17 +10,56 @@
     <title>Droom</title>
 
     <link href='css/index.css' rel='stylesheet'>
+
+    <!-- Temporary Hamburger Styles -->
+    <style>
+        #hamburger {
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        .bar1, .bar2, .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: #333;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+        
+        .change .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+        
+        .change .bar2 {opacity: 0;}
+        
+        .change .bar3 {
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+    </style>
+
+    <!-- Javascript -->
+    <script>
+        <!-- Hamburger Animation -->
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
 </head>
+
 <body>
     <section class='midnight' id='home'>
         <!-- background -->
         
         <header>
-
             <button>LOG IN</button>
-        <!-- logo
-        Login Button
-        hamburger menu -->
+
+            <div class="container" id='hamburger' onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
         </header>
 
         <div id='intro'>
@@ -29,15 +68,18 @@
             <p>See how by messaging your match.</p>
         </div>
 
-        <div id='hook'>
-
-            <div id="input">
-                <p>What</p>
-
-                <p>Where</p>
-
-                <button>Join Droom</button>
-            </div>
+        <div id="input">
+            <form action="" id='search'>
+                What
+                <select name="job" id="whatSel">
+                    <option value="">Job title, skill or company</option>
+                </select>
+                Where:
+                <select name="" id="whereSel">
+                    <option value="">Town, city or zipcode</option>
+                </select>
+                <input type="submit" value='Join Droom'>
+            </form>
         </div>
     </section>
 
@@ -72,5 +114,3 @@
     </footer>
 </body>
 </html>
-
-<!-- Hallo :D -->
