@@ -173,14 +173,23 @@ img {
   font-family: 'Muli', sans-serif;
   font-size: 18px;
 }
-.aboutApp .aboutTextBox .aboutTitle h2 .fa {
-  float: right;
+.aboutApp .aboutTextBox .fa {
+  position: absolute;
+  margin-top: -30px;
+  margin-left: 80%;
+}
+.aboutApp .aboutTextBox button:active {
+  color: #FD632D;
+}
+.aboutApp .aboutTextBox button:hover + .transform-active {
+  display: block;
 }
 .aboutApp .aboutTextBox p {
   font-family: 'Muli', sans-serif;
   font-size: 14px;
 }
 .aboutApp .aboutTextBox ul {
+  display: none;
   list-style-position: inside;
 }
 .aboutApp .aboutTextBox ul li {
@@ -188,6 +197,7 @@ img {
   font-size: 14px;
 }
 .aboutApp .appImgs {
+  margin-top: 20px;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
@@ -197,9 +207,13 @@ img {
 }
 .aboutApp .appImgs .about {
   display: inline-block;
-  /* width: 24%; for desktop*/
   width: 45%;
   margin-right: 5px;
+}
+@media (min-width: 501px) {
+  .aboutApp .appImgs .about {
+    width: 24%;
+  }
 }
 .aboutApp .appImgs .about img {
   width: 100%;
