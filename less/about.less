@@ -1,9 +1,9 @@
-.aboutApp {
-    background-color: @lightOrange;
-    padding: 10px;
 
+@tablet:~"(min-widht:500px)";
+
+.aboutApp {
     .aboutTextBox {
-        padding: 10px;
+      padding:20px;
 
         .aboutTitle {
             h2 {
@@ -15,14 +15,17 @@
             position:absolute;
             margin-top:-30px;
             margin-left:80%;
-
+            
         }
-        button:active {
+        i:active {
                 color:@orange;
             }
-        button:hover + .transform-active {
+        i:hover + .transform-active {
             display: block;
         }
+       i{
+        cursor: pointer;
+       }
         p {
             font-family: @font-Muli;
             font-size: 14px;
@@ -42,8 +45,7 @@
 
 
     .appImgs {
-
-        margin-top: 20px;
+        padding: 0px 25px ;
         overflow-x: scroll;
         overflow-y: hidden;
         white-space: nowrap;
@@ -53,17 +55,24 @@
         }
 
         .about {
-            @media @desktop{
-                width: 24%; 
-            }
+           
             display: inline-block;
             width: 45%;
             margin-right: 5px;
 
+            @media @tablet{
+                width: 35%;  
+                background-color: azure;
+            }
+            @media @desktop{
+                width: 24%; 
+            }
 
             img {
                 width: 100%;
                 border-radius: 5%;
+                border:1px solid  #FDCAB8;
+                
             }
         }
     }
