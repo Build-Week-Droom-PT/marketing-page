@@ -162,12 +162,8 @@ img {
   width: 100%;
   margin: 0 auto;
 }
-.aboutApp {
-  background-color: #FDCAB8;
-  padding: 10px;
-}
 .aboutApp .aboutTextBox {
-  padding: 10px;
+  padding: 20px;
 }
 .aboutApp .aboutTextBox .aboutTitle h2 {
   font-family: 'Muli', sans-serif;
@@ -178,11 +174,14 @@ img {
   margin-top: -30px;
   margin-left: 80%;
 }
-.aboutApp .aboutTextBox button:active {
+.aboutApp .aboutTextBox i:active {
   color: #FD632D;
 }
-.aboutApp .aboutTextBox button:hover + .transform-active {
+.aboutApp .aboutTextBox i:hover + .transform-active {
   display: block;
+}
+.aboutApp .aboutTextBox i {
+  cursor: pointer;
 }
 .aboutApp .aboutTextBox p {
   font-family: 'Muli', sans-serif;
@@ -197,7 +196,7 @@ img {
   font-size: 14px;
 }
 .aboutApp .appImgs {
-  margin-top: 20px;
+  padding: 0px 25px ;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
@@ -210,7 +209,13 @@ img {
   width: 45%;
   margin-right: 5px;
 }
-@media (min-width: 501px) {
+@media (min-widht:500px) {
+  .aboutApp .appImgs .about {
+    width: 35%;
+    background-color: azure;
+  }
+}
+@media (min-width:800px) {
   .aboutApp .appImgs .about {
     width: 24%;
   }
@@ -218,4 +223,56 @@ img {
 .aboutApp .appImgs .about img {
   width: 100%;
   border-radius: 5%;
+  border: 1px solid #6F789C;
+}
+.teamContainer h2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Muli', sans-serif;
+  font-weight: bolder;
+  padding: 20px;
+}
+.teamContainer .teamCardsBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  align-content: center;
+  justify-content: center;
+}
+.teamContainer .teamCardsBox .card {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+}
+@media (min-width:800px) {
+  .teamContainer .teamCardsBox .card {
+    width: 25%;
+  }
+}
+.teamContainer .teamCardsBox .card img {
+  width: 100%;
+  border-radius: 50%;
+  border: 2px solid #F1F3FD;
+  box-shadow: 6px 6px 8px grey;
+}
+.teamContainer .teamCardsBox .card h3 {
+  font-size: 20px;
+  font-family: 'Muli', sans-serif;
+  font-weight: bolder;
+}
+.teamContainer .teamCardsBox .card p {
+  font-size: 14px;
+  font-family: 'Muli', sans-serif;
+}
+.teamContainer .teamCardsBox .card .socialLinks .fa {
+  padding: 5px;
+  text-decoration: none;
+  color: #CA3A07;
+}
+.teamContainer .teamCardsBox .card7 {
+  align-content: center;
 }

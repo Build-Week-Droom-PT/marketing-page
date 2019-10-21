@@ -1,0 +1,69 @@
+.teamContainer {
+
+    h2 {
+        text-align: center;
+        font-size: 30px;
+        font-family: @font-Muli;
+        font-weight: bolder;
+        padding: 20px;
+    }
+
+    .teamCardsBox {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        align-content: center;
+        justify-content: center;
+
+        .card {
+            @media @desktop {
+                width: 25%;
+            }
+
+            width:40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin:10px;
+
+
+            img {
+                width: 100%;
+                border-radius: 50%;
+                border: 2px solid#F1F3FD;
+                box-shadow: 6px 6px 8px grey;
+            }
+
+            h3 {
+                font-size: 20px;
+                font-family: @font-Muli;
+                font-weight: bolder;
+            }
+
+            p {
+                font-size: 14px;
+                font-family: @font-Muli;
+            }
+
+            .socialLinks {
+
+                a .fa {
+                    padding: 5px;
+                    text-decoration: none;
+                    color: black;
+
+                    &:hover {
+                        color: @yellow;
+                    }
+                }
+
+            }
+
+            .card7 {
+                align-content: center;
+            }
+        }
+    }
+}
