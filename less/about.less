@@ -1,38 +1,49 @@
-
-@tablet:~"(min-widht:500px)";
+@tablet: ~"(min-widht:500px)";
 
 .aboutApp {
+    background-color: #E1E6F9;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     .aboutTextBox {
-      padding:20px;
+        padding: 20px;
 
         .aboutTitle {
             h2 {
+                font-size: 20px;
                 font-family: @font-Muli;
-                font-size: 18px;
+                font-weight: bolder;
             }
         }
-        .fa{
-            position:absolute;
-            margin-top:-30px;
-            margin-left:80%;
-            
+
+        .fa {
+            position: absolute;
+            margin-top: -30px;
+            margin-left: 65%;
+
         }
+
         i:active {
-                color:@orange;
-            }
-        i:hover + .transform-active {
+            color: @redOrange;
+        }
+
+        i:hover+.transform-active {
             display: block;
         }
-       i{
-        cursor: pointer;
-       }
+
+        i {
+            cursor: pointer;
+        }
+
         p {
             font-family: @font-Muli;
             font-size: 14px;
         }
 
         ul {
-           display: none;
+            display: none;
             list-style-position: inside;
 
             li {
@@ -45,34 +56,43 @@
 
 
     .appImgs {
-        padding: 0px 25px ;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        white-space: nowrap;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
 
-        :-webkit-scrollbar {
-            display: none;
-        }
-
-        .about {
+        .test {
            
-            display: inline-block;
-            width: 45%;
-            margin-right: 5px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
 
-            @media @tablet{
-                width: 35%;  
-                background-color: azure;
-            }
-            @media @desktop{
-                width: 24%; 
+            :-webkit-scrollbar {
+                display: none;
             }
 
-            img {
-                width: 100%;
-                border-radius: 5%;
-                border:1px solid  #FDCAB8;
-                
+
+            .about {
+
+                display: inline-block;
+                width: 45%;
+                margin-right: 5px;
+
+                @media @desktop {
+                    width: 25%;
+                    margin: 0 auto;
+                }
+                @media @tablet{
+                    width: 25%;
+                }
+
+                img {
+                    width: 100%;
+                    margin: 0 auto;
+                    border-radius: 5%;
+                    border: 1px solid #E1E6F9;
+                    ;
+
+                }
             }
         }
     }
