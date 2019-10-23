@@ -19,27 +19,59 @@
     <title>Droom</title>
 
     <link href='css/index.css' rel='stylesheet'>
-</head>
 
-<body>
-    <div class="container">
-        <section id='home'>
-            <!-- background -->
+        <!-- Javascript -->
+        <script>
+            // Hamburger Animation
+            function myFunction(x) {
+                x.classList.toggle("change");
+            }
+            //scroll snap
+            const init = function(){
+                let items = document.querySelectorAll('section');
+                for (let i = 0; i < items.length; i++){
+                    items[i].style.background = randomColor({luminosity: 'light'});
+                }
+                cssScrollSnapPolyfill()
+            }
+            init();
+        </script>
+    </head>
+    
+    <body>
+        <section class='midnight' id='home'>
 
             <header>
-                <!-- logo
-        Login Button
-        hamburger menu -->
+                <button>LOG IN</button>
+    
+                <div class="container" id='hamburger' onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
             </header>
-
-            <div>
-                <!-- title
-            paragraph
-            2 inputs
-            button -->
+    
+            <div id='intro'>
+                <h1>Find your dream job by swiping right.</h1>
+    
+                <p>See how by messaging your match.</p>
+            </div>
+    
+            <div id="input">
+                <form action="" id='search'>
+                    What
+                    <select name="job" id="whatSel">
+                        <option value="">Job title, skill or company</option>
+                    </select>
+                    Where:
+                    <select name="" id="whereSel">
+                        <option value="">Town, city or zipcode</option>
+                    </select>
+                    <input type="submit" value='Join Droom'>
+                </form>
             </div>
         </section>
-
+        
         <section class="aboutApp">
 
                 <div class=appImgs>
@@ -161,8 +193,22 @@
 
         </section>
 
-        <section id='contact'>
+        <section class='midnight' id='contact'>
+            <form action='' method='post'>
+                <fieldset>
+                    <legend>Contact Us</legend>
+                        Name:<br>
+                        <input type="text" name='name'>
+                        
+                        <br>Email:<br>
+                        <input type="text" name='email'>
+                        
+                        <br>Message:<br>
+                        <input type="text" name='message'>
 
+                        <br><input type="submit" value='Submit'>
+                </fieldset>
+            </form>
         </section>
 
         <footer>
