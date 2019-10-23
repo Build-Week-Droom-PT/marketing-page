@@ -204,7 +204,8 @@ header {
   position: fixed;
   display: flex;
   flex-wrap: wrap;
-  order: 1;
+  z-index: 2;
+  justify-content: space-between;
   /* Rotate first bar */
   /* Fade out the second bar */
   /* Rotate last bar */
@@ -213,20 +214,25 @@ header #logo {
   margin: 30px 45px;
   max-width: 15vw;
 }
+header #spacer {
+  display: flex;
+}
 header #hamburger {
   display: inline-block;
   cursor: pointer;
   background-color: transparent;
   width: 50px;
+  margin: 40px 45px;
 }
 header .bar1,
 header .bar2,
 header .bar3 {
-  width: 35px;
-  height: 5px;
+  width: 45px;
+  height: 6px;
   background-color: #F1F3FD;
-  margin: 6px 0;
+  margin: 8px 0;
   transition: 0.4s;
+  border-radius: 5px;
 }
 header .change .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
@@ -244,6 +250,7 @@ header button {
   border: solid white 3px;
   width: 150px;
   height: 50%;
+  margin: 30px 45px;
   border-radius: 20px;
   color: white;
   font-size: 2.5rem;
