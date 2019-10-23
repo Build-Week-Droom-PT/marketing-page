@@ -1,6 +1,6 @@
 header {
     background-image: url('../images/background.png');
-    width: 80%;
+    width: 86%;
     height: 15vh;    
     position: fixed;
 
@@ -28,43 +28,53 @@ header {
 
     }
 
-        .bar1, .bar2, .bar3 {
-            width: 45px;
-            height: 7px;
-            background-color: @lightGray;
-            margin: 8px 0;
-            transition: 0.4s;
-            border-radius: 5px;
+    .bar1, .bar2, .bar3 {
+        width: 45px;
+        height: 7px;
+        background-color: @lightGray;
+        margin: 8px 0;
+        transition: 0.4s;
+        border-radius: 5px;
+    }
+
+    /* Rotate first bar */
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+        transform: rotate(-45deg) translate(-9px, 6px) ;
+    }
+
+    /* Fade out the second bar */
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    /* Rotate last bar */
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-14px, -12px) ;
+        transform: rotate(45deg) translate(-14px, -12px) ;
+    }
+
+    button {
+        background-color: transparent;
+        border: solid white 3px;
+        width: 150px;
+        height: 50%;
+        margin: 30px 45px;
+
+
+        border-radius: 20px;
+
+        color: white;
+        font-size: 2.5rem;
+        font-weight: bold;
+
+        cursor: pointer;
+
+        transition: all 800ms ease; 
+
+
+        &:hover{
+            animation: bounce 1s;
         }
-
-        /* Rotate first bar */
-        .change .bar1 {
-            -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-            transform: rotate(-45deg) translate(-9px, 6px) ;
-        }
-
-        /* Fade out the second bar */
-        .change .bar2 {
-            opacity: 0;
-        }
-
-        /* Rotate last bar */
-        .change .bar3 {
-            -webkit-transform: rotate(45deg) translate(-14px, -12px) ;
-            transform: rotate(45deg) translate(-14px, -12px) ;
-        }
-
-        button {
-            background-color: transparent;
-            border: solid white 3px;
-            width: 150px;
-            height: 50%;
-            margin: 30px 45px;
-
-
-            border-radius: 20px;
-
-            color: white;
-            font-size: 2.5rem;
-        }
+    }
 }

@@ -1,6 +1,23 @@
 /*MEDIA Queries*/
 /*Font*/
 /*Colors*/
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -141,10 +158,10 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Muli', sans-serif;
 }
 h1 {
-  font-size: 4rem;
+  font-size: 6.5rem;
 }
 h2 {
   font-size: 3.2rem;
@@ -172,7 +189,7 @@ img {
   background-color: white;
 }
 body {
-  padding: 0 10%;
+  padding: 0 7%;
 }
 body section {
   background-color: white;
@@ -206,7 +223,7 @@ footer .footer a:hover {
 }
 header {
   background-image: url('../images/background.png');
-  width: 80%;
+  width: 86%;
   height: 15vh;
   position: fixed;
   display: flex;
@@ -261,12 +278,33 @@ header button {
   border-radius: 20px;
   color: white;
   font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 800ms ease;
+}
+header button:hover {
+  animation: bounce 1s;
 }
 #home {
   height: 100vh;
   background-image: url('../images/background.png');
   max-height: 100vh;
   max-width: 100%;
+  transition: all 800ms ease;
+}
+#home h1 {
+  color: whitesmoke;
+  text-align: left;
+  line-height: 1.5;
+  text-shadow: 2px 2px slategray;
+  padding: 250px  50px 80px;
+  width: 45%;
+}
+#home p {
+  font-size: 4rem;
+  color: #2C3A74;
+  font-style: oblique;
+  padding: 0 45px 150px;
 }
 .aboutApp {
   margin: 0 auto;
@@ -509,6 +547,7 @@ header button {
   font-size: 6rem;
   color: lightsalmon;
   margin-bottom: 8vh;
+  margin-top: 9vh;
 }
 #contact #contactText p {
   font-size: 3.5rem;
@@ -535,4 +574,9 @@ header button {
   background-color: transparent;
   color: white;
   border: solid white 5px;
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+#contact #submit:hover {
+  animation: bounce 1s;
 }
