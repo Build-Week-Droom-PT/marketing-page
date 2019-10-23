@@ -5,39 +5,57 @@
         font-family: @font-Muli;
         font-weight: bolder;
         padding: 25px;
-        color:@textBlue;
+        color: @textBlue;
     }
 
     .teamCardsBox {
         width: 100%;
         display: flex;
-        flex-direction: row;
-        flex-flow: wrap;
+        flex-direction: column;
         align-content: center;
         justify-content: center;
+        padding: 0 15px 15px 0;
+        border-bottom:1px solid #ddd;
+
 
         .card {
-            @media @desktop {
-                width: 25%;
-            }
-
-            width:40%;
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            text-align: center;
-            margin:10px;
+            margin: 10px;
 
+            @media @desktop  {
+                border-bottom: 1px dotted #ddd;
+                padding-bottom: 10px;
+            }
+            @media @tabletx  {
+                border-bottom: 1px dotted #ddd;
+                padding-bottom: 10px;
+            }
 
             .memberPhoto {
-                position: relative;
-                
+                margin: 0 auto;
+                width: 50%;
+        
+                @media @desktop  {
+                    position: relative;
+                    margin: 0 20px;
+                    width: 100%;
+                }
+                @media @tabletx  {
+                    position: relative;
+                    margin: 0 20px;
+                    width: 100%;
+                }
+
                 img {
                     max-width: 100%;
                     border-radius: 50%;
                     border: 2px solid#F1F3FD;
                     box-shadow: 6px 6px 8px grey;
                     transition: transform 2s;
+                    transform: scale(1.0);
                 }
 
                 img:hover {
@@ -46,37 +64,64 @@
 
             }
 
-            h3 {
-                font-size: 20px;
-                font-family: @font-Muli;
-                font-weight: bolder;
-                margin-top:10px;
-                color:@textBlue;
-            }
-
-            p {
-                font-size: 14px;
-                font-family: @font-Muli;
-                color:@darkGray3;
-            }
-
-            .socialLinks {
-                .fa {
-                    font-size: 40px;
-                    padding: 5px;
-                    text-decoration: none;
-                    color: #1f2852;
+            .memberInfo {
+                padding: 0 15px;
+                h3 {
+                    font-size: 20px;
+                    font-family: @font-Muli;
+                    font-weight: bolder;
+                    margin-top: 20px;
+                    margin-bottom:15px;
+                    color: @textBlue;
                 }
 
-                a:hover {
-                    color: #FE4909
+                p {
+                    font-size: 18px;
+                    font-family: @font-Muli;
+                    color: @darkGray3;
+                    text-align: justify;
                 }
+
+                .socialLinks {
+                    margin-top:15px;
+                    .fa {
+                        font-size: 40px;
+                        padding: 5px;
+                        text-decoration: none;
+                        color: #1f2852;
+                    }
+
+                    a:hover {
+                        color: #FE4909
+                    }
+                }
+            }
+        }
+
+        .cardA {
+            @media @desktop {
+                text-align: left;
+                flex-direction: row;
+                // background-color: #FE4909;
+            }
+            @media @tabletx { 
+                text-align: left;
+                flex-direction: row;
+                // background-color: #FE4909;
             }
 
         }
 
-        .card7 {
-            align-content: center;
+        .cardB {
+            @media @desktop {
+                text-align: right;
+                flex-direction: row-reverse;
+            }
+            @media @tabletx {
+                text-align: right;
+                flex-direction: row-reverse;
+            }
         }
+
     }
 }
