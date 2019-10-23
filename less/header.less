@@ -1,7 +1,9 @@
 header {
     background-image: url('../images/background.png');
-    width: 86%;
-    height: 15vh;    
+    background-position: center top;
+
+    width: 80%;
+    min-height: 15vh;    
     position: fixed;
 
     display: flex;
@@ -12,46 +14,72 @@ header {
 
     #logo {
         margin: 30px 45px;
-        max-width: 15vw;
+        max-width: 240px;
+        cursor: pointer;
+        transition: transform 2s;
+        transform: scale(1.0);
+
     }
 
     #spacer {
         display: flex;
     }
 
-    #hamburger {
+
+    .menu-toggle {
         display: inline-block;
-        cursor: pointer;
-        background-color: transparent;
-        width: 50px;
-        margin: 40px 45px;
-
+        padding: .75em 15px;
+        line-height: 1em;
+        font-size: 1em;
+        color: white;
     }
 
-    .bar1, .bar2, .bar3 {
-        width: 45px;
-        height: 7px;
-        background-color: @lightGray;
-        margin: 8px 0;
-        transition: 0.4s;
-        border-radius: 5px;
+    .menu-toggle:hover,
+    .menu-toggle:focus {
+        color: thistle;
     }
 
-    /* Rotate first bar */
-    .change .bar1 {
-        -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-        transform: rotate(-45deg) translate(-9px, 6px) ;
-    }
+    .main-menu {
+        position: absolute;
+        display: none;
+        left: -200px;
+        top: 0;
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: visible;
+        transition: left 0.3s ease,
+        box-shadow 0.3s ease;
+        z-index: 999;
 
-    /* Fade out the second bar */
-    .change .bar2 {
-        opacity: 0;
-    }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 2.5em 0 0;
+            /* Hide shadow w/ -8px while 'closed' */
+            -webkit-box-shadow: -8px 0 8px rgba(0,0,0,.5);
+            -moz-box-shadow: -8px 0 8px rgba(0,0,0,.5);
+            box-shadow: -8px 0 8px rgba(0,0,0,.5);
+            min-height: 100%;
+            width: 200px;
+            background: @darkBlue;
+        }
 
-    /* Rotate last bar */
-    .change .bar3 {
-        -webkit-transform: rotate(45deg) translate(-14px, -12px) ;
-        transform: rotate(45deg) translate(-14px, -12px) ;
+        a {
+            display: block;
+            padding: 25px;
+            line-height: 1rem;
+            font-size: 3rem;
+            color: #fff;
+            text-decoration: none;
+
+            &:hover, &:focus {
+                color: coral;
+            }
+        }
+
+        li:first-child a {
+            border-top: 1px solid #383838;
+        }
     }
 
     button {
@@ -77,4 +105,40 @@ header {
             animation: bounce 1s;
         }
     }
-}
+
+    .menu{
+        font-size: 3rem;
+        display: none;
+    }    
+
+    .menu-close {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .main-menu:target, .main-menu[aria-expanded="true"] {
+        display: block;
+        left: 0;
+        outline: none;
+        -moz-box-shadow: 3px 0 12px rgba(0,0,0,.25);
+        -webkit-box-shadow: 3px 0 12px rgba(0,0,0,.25);
+        box-shadow: 3px 0 12px rgba(0,0,0,.25);
+    }
+
+    .main-menu:target .menu-close, .main-menu[aria-expanded="true"] .menu-close {
+        z-index: 1001;
+    }
+
+    .main-menu:target ul, .main-menu[aria-expanded="true"] ul {
+        position: relative;
+        z-index: 1000;
+    }    
+    
+    .hamburger {
+        padding: 25px 35px;
+        font-size: 5.5rem;
+        border: none;
+    }
+
+}    

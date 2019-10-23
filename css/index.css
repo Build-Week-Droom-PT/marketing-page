@@ -189,7 +189,7 @@ img {
   background-color: white;
 }
 body {
-  padding: 0 7%;
+  margin: 0 10%;
 }
 body section {
   background-color: white;
@@ -223,51 +223,73 @@ footer .footer a:hover {
 }
 header {
   background-image: url('../images/background.png');
-  width: 86%;
-  height: 15vh;
+  background-position: center top;
+  width: 80%;
+  min-height: 15vh;
   position: fixed;
   display: flex;
   flex-wrap: wrap;
   z-index: 2;
   justify-content: space-between;
-  /* Rotate first bar */
-  /* Fade out the second bar */
-  /* Rotate last bar */
 }
 header #logo {
   margin: 30px 45px;
-  max-width: 15vw;
+  max-width: 240px;
+  cursor: pointer;
+  transition: transform 2s;
+  transform: scale(1);
 }
 header #spacer {
   display: flex;
 }
-header #hamburger {
+header .menu-toggle {
   display: inline-block;
-  cursor: pointer;
-  background-color: transparent;
-  width: 50px;
-  margin: 40px 45px;
+  padding: 0.75em 15px;
+  line-height: 1em;
+  font-size: 1em;
+  color: white;
 }
-header .bar1,
-header .bar2,
-header .bar3 {
-  width: 45px;
-  height: 7px;
-  background-color: #F1F3FD;
-  margin: 8px 0;
-  transition: 0.4s;
-  border-radius: 5px;
+header .menu-toggle:hover,
+header .menu-toggle:focus {
+  color: thistle;
 }
-header .change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
+header .main-menu {
+  position: absolute;
+  display: none;
+  left: -200px;
+  top: 0;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: visible;
+  transition: left 0.3s ease, box-shadow 0.3s ease;
+  z-index: 999;
 }
-header .change .bar2 {
-  opacity: 0;
+header .main-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 2.5em 0 0;
+  /* Hide shadow w/ -8px while 'closed' */
+  -webkit-box-shadow: -8px 0 8px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: -8px 0 8px rgba(0, 0, 0, 0.5);
+  box-shadow: -8px 0 8px rgba(0, 0, 0, 0.5);
+  min-height: 100%;
+  width: 200px;
+  background: #1f2852;
 }
-header .change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-14px, -12px);
-  transform: rotate(45deg) translate(-14px, -12px);
+header .main-menu a {
+  display: block;
+  padding: 25px;
+  line-height: 1rem;
+  font-size: 3rem;
+  color: #fff;
+  text-decoration: none;
+}
+header .main-menu a:hover,
+header .main-menu a:focus {
+  color: coral;
+}
+header .main-menu li:first-child a {
+  border-top: 1px solid #383838;
 }
 header button {
   background-color: transparent;
@@ -285,11 +307,48 @@ header button {
 header button:hover {
   animation: bounce 1s;
 }
+header .menu {
+  font-size: 3rem;
+  display: none;
+}
+header .menu-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+header .main-menu:target,
+header .main-menu[aria-expanded="true"] {
+  display: block;
+  left: 0;
+  outline: none;
+  -moz-box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+}
+header .main-menu:target .menu-close,
+header .main-menu[aria-expanded="true"] .menu-close {
+  z-index: 1001;
+}
+header .main-menu:target ul,
+header .main-menu[aria-expanded="true"] ul {
+  position: relative;
+  z-index: 1000;
+}
+header .hamburger {
+  padding: 25px 35px;
+  font-size: 5.5rem;
+  border: none;
+}
 #home {
   height: 100vh;
-  background-image: url('../images/background.png');
-  max-height: 100vh;
   max-width: 100%;
+  background-image: url('../images/background.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
   transition: all 800ms ease;
 }
 #home h1 {
