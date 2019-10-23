@@ -235,19 +235,24 @@
         </section>
 
         <section class='midnight' id='contact'>
+            <div id="contactText">
+                <h2>Contact Us</h2>
+
+                <p>Got a question? We'd love to hear from you. Drop us a message and we'll get back to you as soon as possible.</p>
+            </div>
+            
             <form action='' method='post'>
                 <fieldset>
-                    <legend>Contact Us</legend>
-                        Name:<br>
+                        Name<br>
                         <input type="text" name='name'>
                         
-                        <br>Email:<br>
+                        <br>Email*<br>
                         <input type="text" name='email'>
                         
-                        <br>Message:<br>
-                        <input type="text" name='message'>
+                        <br>Message*<br>
+                        <input type="text" name='message' id='message'>
 
-                        <br><input type="submit" value='Submit'>
+                        <br><input type="submit" value='Submit' id='submit'>
                 </fieldset>
             </form>
         </section>

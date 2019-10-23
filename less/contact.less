@@ -1,4 +1,52 @@
 #contact {
-    height: 60vh;
+    background-color: @darkBlue;
+    font-size: 3.5rem;
+    color: white;
+    padding-top: 5vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
     
+    #contactText{
+        text-align: center;
+        width: 80%;
+        margin: 5vh auto;
+
+        h2 {
+            font-size: 6rem;
+            margin-bottom: 8vh;
+        }
+
+        p {
+            font-size: 3.5rem;
+        }
+    }
+
+
+    fieldset {
+        margin: 10vh auto;
+    }
+
+    input {
+        width: 40vw;
+        height: 10vh;
+        margin: 40px;
+        font-size: 3.5rem;
+
+
+        border-radius: 40px;
+    }
+
+    #message {
+        height: 40vh;
+    }
+
+    #submit {
+        background-color: transparent;
+        color: white;
+        border: solid white 5px;
+    }
+
 }
