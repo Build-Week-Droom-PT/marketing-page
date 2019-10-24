@@ -376,10 +376,10 @@ header .hamburger {
     text-align: left;
     margin-bottom: 100px;
     padding-left: 50px;
-    padding-top: 0;
+    margin-top: -200px;
   }
 }
-@media (min-width:800px) {
+@media (min-width:600px) {
   #home h1 {
     margin-bottom: 100px;
   }
@@ -391,7 +391,6 @@ header .hamburger {
   text-align: center;
   text-shadow: thistle 1px 1px;
   font-weight: bolder;
-  margin-bottom: 200px;
 }
 @media (min-width:1000px) {
   #home p {
@@ -399,6 +398,89 @@ header .hamburger {
     text-align: left;
     width: 38%;
     margin-bottom: auto;
+  }
+}
+#home #input {
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width:1000px) {
+  #home #input {
+    align-items: center;
+  }
+}
+@media (min-width:1097px) {
+  #home #input {
+    margin-left: 6%;
+  }
+}
+@media (min-width:1499px) {
+  #home #input {
+    margin-left: 14vw;
+  }
+}
+#home #input #inputText {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px 40% 20px 0;
+  color: white;
+}
+@media (min-width:1000px) {
+  #home #input #inputText {
+    margin-right: 50%;
+  }
+}
+#home #input #inputText #what,
+#home #input #inputText #where {
+  font-size: 2rem;
+}
+#home #input #whatSel,
+#home #input #whereSel,
+#home #input #join {
+  height: 60px;
+  border: none;
+  font-family: 'Muli', sans-serif;
+  color: gray;
+}
+@media (min-width:1000px) {
+  #home #input #whatSel,
+  #home #input #whereSel,
+  #home #input #join {
+    font-size: 2rem;
+  }
+}
+#home #input #search {
+  display: flex;
+  width: 80%;
+}
+#home #input #whatSel {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-left: 20px;
+}
+#home #input #whereSel {
+  border-left: 1px solid silver;
+  border-right: 1px solid silver;
+  padding-left: 20px;
+}
+#home #input #join {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-weight: bold;
+  background-color: #1f2852;
+  color: white;
+}
+@media (min-width:1000px) {
+  #home #input #join {
+    font-size: 2.5rem;
+    padding: 0 30px;
+  }
+}
+@media (min-width:1097px) {
+  #home {
+    align-items: start;
+    flex-wrap: wrap;
   }
 }
 @media (min-width:1000px) {
@@ -543,7 +625,7 @@ header .hamburger {
     padding-bottom: 10px;
   }
 }
-@media (min-width:800px) {
+@media (min-width:600px) {
   .teamContainer .teamCardsBox .card {
     border-bottom: 1px dotted #ddd;
     padding-bottom: 10px;
@@ -560,7 +642,7 @@ header .hamburger {
     width: 100%;
   }
 }
-@media (min-width:800px) {
+@media (min-width:600px) {
   .teamContainer .teamCardsBox .card .memberPhoto {
     position: relative;
     margin: 0 20px;
@@ -614,7 +696,7 @@ header .hamburger {
     flex-direction: row;
   }
 }
-@media (min-width:800px) {
+@media (min-width:600px) {
   .teamContainer .teamCardsBox .cardA {
     text-align: left;
     flex-direction: row;
@@ -626,7 +708,7 @@ header .hamburger {
     flex-direction: row-reverse;
   }
 }
-@media (min-width:800px) {
+@media (min-width:600px) {
   .teamContainer .teamCardsBox .cardB {
     text-align: right;
     flex-direction: row-reverse;
@@ -717,7 +799,7 @@ header .hamburger {
     width: 40vw;
   }
 }
-@media (min-width:800px) {
+@media (min-width:600px) {
   #contact #submit {
     height: 80px;
   }
