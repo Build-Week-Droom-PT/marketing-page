@@ -1,4 +1,6 @@
-* {
+* {    
+  transition: all 500ms ease; 
+
     box-sizing: border-box;
   }
   
@@ -14,11 +16,7 @@
   h1, h2, h3, h4, h5 {
     font-family: @font-Muli;
   }
-  
-  h1 {
-    font-size: 6.5rem;
-  }
-  
+    
   h2 {
     font-size: 3.2rem;
     padding-bottom: 10px;
@@ -48,6 +46,7 @@ p {
   img {
     max-width: 100%;
     height: auto;
+
   }
   
   .container {
@@ -58,8 +57,12 @@ p {
   }
 
   body {
-    margin: 0 10%;
+    
     section{
       background-color: white;
+    }
+
+    @media @desktop {
+      margin: 0 10%;
     }
   }

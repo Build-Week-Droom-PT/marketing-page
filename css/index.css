@@ -143,6 +143,7 @@ table {
   border-spacing: 0;
 }
 * {
+  transition: all 500ms ease;
   box-sizing: border-box;
 }
 html {
@@ -159,9 +160,6 @@ h3,
 h4,
 h5 {
   font-family: 'Muli', sans-serif;
-}
-h1 {
-  font-size: 6.5rem;
 }
 h2 {
   font-size: 3.2rem;
@@ -188,11 +186,13 @@ img {
   margin: 0 auto;
   background-color: white;
 }
-body {
-  margin: 0 10%;
-}
 body section {
   background-color: white;
+}
+@media (min-width:1000px) {
+  body {
+    margin: 0 10%;
+  }
 }
 footer {
   width: 100%;
@@ -222,22 +222,30 @@ footer .footer a:hover {
   color: #FE4909;
 }
 header {
-  background-image: url('../images/background.png');
-  background-position: center top;
-  width: 80%;
   min-height: 15vh;
-  position: fixed;
   display: flex;
   flex-wrap: wrap;
   z-index: 2;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  width: 100%;
+}
+@media (min-width:1000px) {
+  header {
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 header #logo {
-  margin: 30px 45px;
   max-width: 240px;
   cursor: pointer;
   transition: transform 2s;
   transform: scale(1);
+  margin-top: 20px;
+}
+@media (min-width:1000px) {
+  header #logo {
+    margin-left: 40px;
+  }
 }
 header #spacer {
   display: flex;
@@ -341,15 +349,14 @@ header .hamburger {
 }
 #home {
   height: 100vh;
-  max-width: 100%;
   background-image: url('../images/background.png');
   background-position: center center;
-  background-repeat: no-repeat;
   background-size: cover;
-  max-height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  transition: all 800ms ease;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #home h1 {
   color: whitesmoke;
@@ -357,13 +364,40 @@ header .hamburger {
   line-height: 1.5;
   text-shadow: 2px 2px slategray;
   padding: 250px  50px 80px;
-  width: 45%;
+  font-size: 3.5rem;
+  width: 100%;
+  text-align: center;
+  font-weight: bolder;
+}
+@media (min-width:1000px) {
+  #home h1 {
+    font-size: 5rem;
+    width: 50%;
+    text-align: left;
+  }
 }
 #home p {
-  font-size: 4rem;
-  color: #2C3A74;
   font-style: oblique;
-  padding: 0 45px 150px;
+  color: #2C3A74;
+  font-size: 2.5rem;
+  padding: auto;
+  text-align: center;
+  text-shadow: thistle 1px 1px;
+  font-weight: bolder;
+}
+@media (min-width:1000px) {
+  #home p {
+    font-size: 2.5rem;
+    padding: 0 45px 150px;
+    text-align: left;
+  }
+}
+@media (min-width:1000px) {
+  #home {
+    align-items: start;
+    justify-content: center;
+    flex-direction: row;
+  }
 }
 .aboutApp {
   margin: 0 auto;
@@ -589,7 +623,7 @@ header .hamburger {
 }
 #contact {
   background-color: #1f2852;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   color: white;
   padding-top: 5vh;
   display: flex;
@@ -597,45 +631,83 @@ header .hamburger {
   align-items: center;
   justify-content: center;
 }
+@media (min-width:1000px) {
+  #contact {
+    font-size: 3.5rem;
+  }
+}
 #contact #contactText {
   text-align: center;
   width: 80%;
   margin: 5vh auto;
 }
 #contact #contactText h3 {
-  font-size: 6rem;
+  font-size: 4.5rem;
   color: lightsalmon;
   margin-bottom: 8vh;
   margin-top: 9vh;
 }
+@media (min-width:1000px) {
+  #contact #contactText h3 {
+    font-size: 6rem;
+  }
+}
 #contact #contactText p {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   color: thistle;
+}
+@media (min-width:1000px) {
+  #contact #contactText p {
+    font-size: 3.5rem;
+  }
 }
 #contact fieldset {
   margin: 10vh auto;
 }
 #contact input {
-  width: 40vw;
-  height: 10vh;
-  margin: 40px;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   color: thistle;
+  height: 5vh;
+  margin: 30px 0;
+  padding: 20px;
   background-color: transparent;
   border: solid black 1px;
   box-shadow: inset 2px 5px black;
   border-radius: 40px;
 }
+@media (min-width:1000px) {
+  #contact input {
+    font-size: 3.5rem;
+    width: 40vw;
+    height: 10vh;
+    margin: 40px;
+  }
+}
 #contact #message {
-  height: 40vh;
+  height: 30vh;
+  text-align: left;
 }
 #contact #submit {
   background-color: transparent;
   color: white;
   border: solid white 5px;
+  padding: 0;
+  width: 95%;
+  height: 80px;
+  text-align: center;
   cursor: pointer;
   transition: all 500ms ease;
 }
 #contact #submit:hover {
   animation: bounce 1s;
+}
+@media (min-width:1000px) {
+  #contact #submit {
+    width: 40vw;
+  }
+}
+@media (min-width:800px) {
+  #contact #submit {
+    height: 80px;
+  }
 }
