@@ -487,7 +487,7 @@ header .hamburger {
 }
 .aboutApp .appImgs .test .about {
   display: inline-block;
-  width: 45%;
+  width: 35%;
   margin-right: 5px;
 }
 @media (min-width:1000px) {
@@ -508,6 +508,7 @@ header .hamburger {
   border: 2px solid #E1E6F9;
   box-shadow: 6px 6px 8px grey;
   transition: transform 2s;
+  width: 100%;
 }
 .aboutApp .appImgs .test .about img:hover {
   transform: scale(1.1);
