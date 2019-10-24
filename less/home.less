@@ -1,17 +1,15 @@
 #home {
     height: 100vh;
-    max-width: 100%;
     background-image: url('../images/background.png');
     background-position: center center;
-    background-repeat: no-repeat;
     background-size: cover;
-    max-height: 100vh;
-    // max-width: 100%;
 
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
 
-    transition: all 800ms ease; 
+        justify-content: center;
+        align-items: center;
 
     h1 {
         color: whitesmoke;
@@ -21,15 +19,42 @@
         text-shadow: 2px 2px slategray;
         padding: 250px  50px 80px;
 
-        width: 45%
+        @media @desktop {
+            font-size: 5rem;
+            width: 50%;
+            text-align: left;
+        }
 
+        font-size: 3.5rem;
+        width: 100%;
+        text-align: center;
+        font-weight: bolder;
+    
     }
 
     p {
-        font-size: 4rem;
-        color: @textBlue;
         font-style: oblique;
+        color: @textBlue;
+
+
+        @media @desktop {
+        font-size: 2.5rem;
         padding: 0 45px 150px;
+        text-align: left;
+        }
+
+        font-size: 2.5rem;
+        padding: auto;
+        text-align: center;
+        text-shadow: thistle 1px 1px;
+        font-weight: bolder;
+    }
+
+    @media @desktop {
+        align-items: start;
+        justify-content: center;
+        flex-direction: row;
+
     }
 
 

@@ -34,9 +34,24 @@
 	text-align: center;
 	color: @textBlue;
 }
-.flexDisplay(@direction, @justify, @align-content){
+
+.flexDisplay(@direction, @justify, @align-content) {
 	display: flex;
 	flex-direction: @direction;
 	justify-content: @justify;
 	align-content: @align-content;
+}
+
+.gitIcon() {
+	font-size: 40px;
+	padding: 10px;
+	text-decoration: none;
+	color: #1f2852;
+}
+.imagesAnimations(@color, @radius){
+	max-width: 100%;
+	border-radius: @radius;
+	border: 2px solid@color;
+	box-shadow: 6px 6px 8px grey;
+	transition: transform 2s;
 }
