@@ -354,15 +354,15 @@ header .hamburger {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 #home h1 {
   color: whitesmoke;
   text-align: left;
   line-height: 1.5;
+  margin-bottom: 100px;
+  padding-top: 150px;
   text-shadow: 2px 2px slategray;
-  padding: 250px  50px 80px;
   font-size: 3.5rem;
   width: 100%;
   text-align: center;
@@ -371,30 +371,38 @@ header .hamburger {
 @media (min-width:1000px) {
   #home h1 {
     font-size: 5rem;
-    width: 50%;
+    width: 42%;
     text-align: left;
+    margin-bottom: 100px;
+    padding-left: 50px;
+    padding-top: 0;
+  }
+}
+@media (min-width:800px) {
+  #home h1 {
+    margin-bottom: 100px;
   }
 }
 #home p {
   font-style: oblique;
   color: #2C3A74;
   font-size: 2.5rem;
-  padding: auto;
   text-align: center;
   text-shadow: thistle 1px 1px;
   font-weight: bolder;
+  margin-bottom: 200px;
 }
 @media (min-width:1000px) {
   #home p {
-    font-size: 2.5rem;
-    padding: 0 45px 150px;
+    margin-left: 50px;
     text-align: left;
+    width: 38%;
+    margin-bottom: auto;
   }
 }
 @media (min-width:1000px) {
   #home {
     align-items: start;
-    justify-content: center;
     flex-direction: row;
   }
 }
