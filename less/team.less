@@ -10,19 +10,14 @@
 
     .teamCardsBox {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        justify-content: center;
+        .flexDisplay(column, center, center);
         padding: 0 15px 15px 0;
         border-bottom:1px solid #ddd;
 
 
         .card {
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            .flexDisplay(column, center, null);
             margin: 10px;
 
             @media @desktop  {
@@ -50,12 +45,8 @@
                 }
 
                 img {
-                    max-width: 100%;
-                    border-radius: 50%;
-                    border: 2px solid#F1F3FD;
-                    box-shadow: 6px 6px 8px grey;
-                    transition: transform 2s;
-                    transform: scale(1.0);
+                    .imagesAnimations(#F1F3FD, 50%);
+                    
                 }
 
                 img:hover {
@@ -67,28 +58,22 @@
             .memberInfo {
                 padding: 0 15px;
                 h3 {
-                    font-size: 20px;
-                    font-family: @font-Muli;
-                    font-weight: bolder;
+                    .headingStyle();
+                    font-size: 25px;
                     margin-top: 20px;
-                    margin-bottom:15px;
-                    color: @textBlue;
+                    margin-bottom: 15px;
+
                 }
 
                 p {
-                    font-size: 18px;
-                    font-family: @font-Muli;
-                    color: @darkGray3;
-                    text-align: justify;
+                    .paragraphStyle(justify);
+
                 }
 
                 .socialLinks {
                     margin-top:15px;
                     .fa {
-                        font-size: 40px;
-                        padding: 5px;
-                        text-decoration: none;
-                        color: #1f2852;
+                        .gitIcon();
                     }
 
                     a:hover {

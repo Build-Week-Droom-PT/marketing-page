@@ -2,10 +2,7 @@
 
 .aboutApp {
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+    .flexDisplay(column, center, null);
     .aboutTextBox {
         padding: 20px;
 
@@ -105,13 +102,7 @@
                     width: 25%;
                 }
 
-                img {
-                    width: 100%;
-                    margin: 0 auto;
-                    border-radius: 5%;
-                    border: 1px solid #E1E6F9;
-                    box-shadow: 6px 6px 8px grey;
-                    transition: transform 2s;
+                img {.imagesAnimations(#E1E6F9, 5%);
                 }
 
                 img:hover {

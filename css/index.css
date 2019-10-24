@@ -214,7 +214,7 @@ footer .footer .copy-right {
 }
 footer .footer .fa {
   font-size: 40px;
-  padding: 15px;
+  padding: 10px;
   text-decoration: none;
   color: #1f2852;
 }
@@ -412,6 +412,7 @@ header .hamburger {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-content: null;
 }
 .aboutApp .aboutTextBox {
   padding: 20px;
@@ -501,10 +502,9 @@ header .hamburger {
   }
 }
 .aboutApp .appImgs .test .about img {
-  width: 100%;
-  margin: 0 auto;
+  max-width: 100%;
   border-radius: 5%;
-  border: 1px solid #E1E6F9;
+  border: 2px solid #E1E6F9;
   box-shadow: 6px 6px 8px grey;
   transition: transform 2s;
 }
@@ -523,8 +523,8 @@ header .hamburger {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-content: center;
   justify-content: center;
+  align-content: center;
   padding: 0 15px 15px 0;
   border-bottom: 1px solid #ddd;
 }
@@ -533,6 +533,7 @@ header .hamburger {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-content: null;
   margin: 10px;
 }
 @media (min-width:1000px) {
@@ -571,7 +572,6 @@ header .hamburger {
   border: 2px solid #F1F3FD;
   box-shadow: 6px 6px 8px grey;
   transition: transform 2s;
-  transform: scale(1);
 }
 .teamContainer .teamCardsBox .card .memberPhoto img:hover {
   transform: scale(1.1);
@@ -580,12 +580,14 @@ header .hamburger {
   padding: 0 15px;
 }
 .teamContainer .teamCardsBox .card .memberInfo h3 {
-  font-size: 20px;
+  font-size: 30px;
   font-family: 'Muli', sans-serif;
   font-weight: bolder;
+  text-align: center;
+  color: #2C3A74;
+  font-size: 25px;
   margin-top: 20px;
   margin-bottom: 15px;
-  color: #2C3A74;
 }
 .teamContainer .teamCardsBox .card .memberInfo p {
   font-size: 18px;
@@ -598,7 +600,7 @@ header .hamburger {
 }
 .teamContainer .teamCardsBox .card .memberInfo .socialLinks .fa {
   font-size: 40px;
-  padding: 5px;
+  padding: 10px;
   text-decoration: none;
   color: #1f2852;
 }
