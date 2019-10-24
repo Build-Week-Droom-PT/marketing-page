@@ -1,6 +1,10 @@
 // animations
 @keyframes bounce {
-	0%, 20%, 60%, 100% {
+
+	0%,
+	20%,
+	60%,
+	100% {
 		-webkit-transform: translateY(0);
 		transform: translateY(0);
 	}
@@ -14,4 +18,25 @@
 		-webkit-transform: translateY(-10px);
 		transform: translateY(-10px);
 	}
+}
+
+.paragraphStyle(@align) {
+	font-size: 18px;
+	font-family: @font-Muli;
+	color: @darkGray3;
+	text-align: @align;
+}
+
+.headingStyle() {
+	font-size: 30px;
+	font-family: @font-Muli;
+	font-weight: bolder;
+	text-align: center;
+	color: @textBlue;
+}
+.flexDisplay(@direction, @justify, @align-content){
+	display: flex;
+	flex-direction: @direction;
+	justify-content: @justify;
+	align-content: @align-content;
 }
