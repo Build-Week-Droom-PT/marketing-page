@@ -20,12 +20,26 @@
 
     <link href='css/index.css' rel='stylesheet'>
 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
         <!-- Javascript -->
         <script>
             // Hamburger Animation
-            function myFunction(x) {
-                x.classList.toggle("change");
-            }
+            $(document).ready(function() {
+                    $(document).delegate('.open', 'click', function(event){
+                        $(this).addClass('oppenned');
+                        event.stopPropagation();
+                })
+                $(document).delegate('body', 'click', function(event) {
+                    $('.open').removeClass('oppenned');
+                })
+                $(document).delegate('.cls', 'click', function(event){
+                    $('.open').removeClass('oppenned');
+                    event.stopPropagation();
+                });
+            });
+
+
             //scroll snap
             const init = function(){
                 let items = document.querySelectorAll('section');
@@ -44,31 +58,36 @@
             <header>
                 <a href=#home javascript:void(0)><img id='logo' src="images/Logo.png" alt="Droom Logo"></a>
 
-                <div id="spacer">
+                <div class="spacer">
                     <button>LOG IN</button>
-                    
-                    <a href="#main-menu" id="main-menu-toggle" class="menu-toggle">
-                        <span class="fa fa-bars hamburger"></span>
-                    </a>
 
-                    <nav id="main-menu" class="main-menu">
-                        <a href="#main-menu-toggle" class="menu-close">
-                            <span class="fa fa-times hamburger"></span>
-                        </a>
-
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#team">Our Team</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                    <div  class="open">
+                    <span class="cls"></span>
+                    <span>
+                        <ul class="sub-menu ">
+                            <li>
+                                <a href="#home" id='firstItem'>Home</a>
+                            </li>
+                            <li>
+                                <a href="#about">About</a>
+                            </li>
+                            <li>
+                                <a href="#team">Our Team</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contact</a>
+                            </li>
                         </ul>
-                    </nav>
-
-                    <a href="#main-menu-toggle" class="backdrop" hidden></a>
-
-
+                    </span>
+                    <span class="cls"></span>
                 </div>
+                
+                </div>
+
+    
             </header>
+
+            <a href="#main-menu-toggle" class="backdrop" hidden></a>
 
             <div id='intro'>
                 <h1>Find your dream job by swiping right.</h1>
