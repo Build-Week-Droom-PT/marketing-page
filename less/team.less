@@ -1,14 +1,18 @@
 .teamContainer {
     h2 {
+        text-align: center;
+        font-size: 40px;
+        font-family: @font-Muli;
+        font-weight: bolder;
         padding: 25px;
-        .headingStyle()
+        color: @textBlue;
     }
 
     .teamCardsBox {
         width: 100%;
         .flexDisplay(column, center, center);
         padding: 0 15px 15px 0;
-        border-bottom: 1px solid #ddd;
+        border-bottom:1px solid #ddd;
 
 
         .card {
@@ -16,12 +20,11 @@
             .flexDisplay(column, center, null);
             margin: 10px;
 
-            @media @desktop {
+            @media @desktop  {
                 border-bottom: 1px dotted #ddd;
                 padding-bottom: 10px;
             }
-
-            @media @tabletx {
+            @media @tabletx  {
                 border-bottom: 1px dotted #ddd;
                 padding-bottom: 10px;
             }
@@ -29,14 +32,13 @@
             .memberPhoto {
                 margin: 0 auto;
                 width: 50%;
-
-                @media @desktop {
+        
+                @media @desktop  {
                     position: relative;
                     margin: 0 20px;
                     width: 100%;
                 }
-
-                @media @tabletx {
+                @media @tabletx  {
                     position: relative;
                     margin: 0 20px;
                     width: 100%;
@@ -55,7 +57,6 @@
 
             .memberInfo {
                 padding: 0 15px;
-
                 h3 {
                     .headingStyle();
                     font-size: 25px;
@@ -70,8 +71,7 @@
                 }
 
                 .socialLinks {
-                    margin-top: 15px;
-
+                    margin-top:15px;
                     .fa {
                         .gitIcon();
                     }
@@ -89,10 +89,10 @@
                 flex-direction: row;
                 // background-color: #FE4909;
             }
-
-            @media @tabletx {
+            @media @tabletx { 
                 text-align: left;
                 flex-direction: row;
+                // background-color: #FE4909;
             }
 
         }
@@ -102,7 +102,6 @@
                 text-align: right;
                 flex-direction: row-reverse;
             }
-
             @media @tabletx {
                 text-align: right;
                 flex-direction: row-reverse;

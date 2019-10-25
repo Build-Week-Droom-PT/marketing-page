@@ -1,37 +1,37 @@
 * {    
   transition: all 500ms ease; 
 
-    box-sizing: border-box;
-  }
-  
-  html {
-    font-size: 62.5%;
-  }
-  
-  html, body {
-    font-family: 'Roboto', sans-serif;
-    background-color: @veryLightGray;
-  }
-  
-  h1, h2, h3, h4, h5 {
-    font-family: @font-Muli;
-  }
-    
-  h2 {
-    font-size: 3.2rem;
-    padding-bottom: 10px;
-  }
+  box-sizing: border-box;
+}
 
-  h3 {
-    font-size: 20px;
-    font-family: @font-Muli;
-  }
+html {
+  font-size: 62.5%;
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  background-color: @veryLightGray;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: @font-Muli;
+}
   
-  h4 {
-    font-size: 2.5rem;
-    padding-bottom: 10px;
-  }
-  
+h2 {
+  font-size: 3.2rem;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-size: 20px;
+  font-family: @font-Muli;
+}
+
+h4 {
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+}
+
 //   p {
 //     line-height: 1.5;
 //     font-size: 1.6rem;
@@ -39,30 +39,42 @@
 //   }
 
 p {
-  font-family: @font-Muli;
+font-family: @font-Muli;
 
 }
-  
-  img {
-    max-width: 100%;
-    height: auto;
 
-  }
+img {
+  max-width: 100%;
+  height: auto;
+
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+body {
   
-  .container {
-    max-width: 1000px;
-    width: 100%;
-    margin: 0 auto;
+  section{
     background-color: white;
   }
 
-  body {
-    
-    section{
-      background-color: white;
-    }
+  // @media @desktop {
+  //   margin: 0 10%;
+  // }
+}
 
-    @media @desktop {
-      margin: 0 10%;
-    }
-  }
+.vendor(@property, @value) {
+-webkit-@{property}: @value;
+  -khtml-@{property}: @value;
+    -moz-@{property}: @value;
+        @{property}: @value;
+}
+
+#usage {
+.vendor(border-radius, 3px);
+.vendor(box-shadow, 10px 10px);
+}

@@ -8,7 +8,6 @@
     flex-wrap: wrap;
     flex-direction: column;
 
-        // justify-content: space-around;
         align-items: center;
 
     h1 {
@@ -19,7 +18,6 @@
         padding-top: 150px;
 
         text-shadow: 2px 2px slategray;
-        // padding: 250px  50px 80px;
 
         @media @desktop {
             font-size: 5rem;
@@ -27,7 +25,7 @@
             text-align: left;
             margin-bottom: 100px;
             padding-left: 50px;
-            padding-top: 0;
+            margin-top: -200px;
         }
 
         @media @tabletx {
@@ -48,7 +46,6 @@
         text-align: center;
         text-shadow: thistle 1px 1px;
         font-weight: bolder;
-        margin-bottom: 200px;
 
         @media @desktop {
         margin-left: 50px;
@@ -58,13 +55,90 @@
         }
     }
 
-    #input{
+    #input {
+        font-size: 3rem;
+        display: flex;
+        flex-direction: column;
 
+        @media @desktop {
+            align-items: center;
+        }
+
+        @media @desktopBug {
+            margin-left: 6%;
+        }
+
+        @media @desktopBugTwo {
+            margin-left: 14vw;
+        }
+
+        #inputText {
+            display: flex;
+            justify-content: space-between;
+            margin: 100px 40% 20px 0;
+            color: white;
+
+            @media @desktop {
+                margin-right: 50%;
+            }
+
+            #what, #where{
+                font-size: 2rem;
+            }
+        }
+
+        #whatSel, #whereSel, #join {
+            height: 60px;
+            border: none;
+            font-family: @font-Muli;
+            color: gray;
+
+            @media @desktop{
+            font-size: 2rem;
+            }
+        }
+
+        #search {
+            display: flex;
+            width: 80%;
+        }
+
+        #whatSel {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            padding-left: 20px;
+        }
+
+        #whereSel {
+            border-left: 1px solid silver;
+            border-right: 1px solid silver;
+            padding-left: 20px;
+        }
+
+        #join {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-weight: bold;
+            background-color: @darkBlue;
+            color: white;
+
+            @media @desktop {
+            font-size: 2.5rem;
+            padding: 0 30px;
+            }
+        }
+
+    }
+
+    @media @desktopBug {
+        align-items: start;
+        flex-wrap: wrap;
+        
     }
 
     @media @desktop {
         align-items: start;
-        // justify-content: center;
         flex-direction: row;
     }
+
 }

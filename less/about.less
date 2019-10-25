@@ -1,3 +1,4 @@
+@tablet: ~"(min-widht:500px)";
 
 .aboutApp {
     margin: 0 auto;
@@ -6,27 +7,32 @@
         padding: 20px;
 
         p {
-            .paragraphStyle(justify);
-
+            text-align: center;
+            color:@textBlue;
+            font-family: @font-Muli;
+            font-size: 30px;
         }
 
         h2 {
-            .headingStyle()
+            font-size: 40px;
+            font-family: @font-Muli;
+            font-weight: bolder;
+            text-align: center;
+            color:@textBlue;
         }
 
 
         .fa {
-            @media @desktop {
+            @media @desktop{
                 margin-left: 65%;
             }
-
             position: absolute;
             margin-top: -43px;
             margin-left: 79%;
             color:@textBlue;
-
+            
         }
-
+       
 
         i:active {
             color: @redOrange;
@@ -45,8 +51,8 @@
             list-style-position: inside;
 
             li {
-                .paragraphStyle(null);
-    
+                font-family: @font-Muli;
+                font-size: 20px;
             }
         }
 
