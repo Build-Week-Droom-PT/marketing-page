@@ -214,6 +214,8 @@ footer {
   position: absolute;
   left: 0px;
   right: 0;
+  display: flex;
+  justify-content: center;
 }
 footer .footer {
   display: flex;
