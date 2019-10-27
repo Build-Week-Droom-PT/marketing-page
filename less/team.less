@@ -1,11 +1,9 @@
 .teamContainer {
     h2 {
-        text-align: center;
+        .headingStyle();
         font-size: 40px;
-        font-family: @font-Muli;
-        font-weight: bolder;
         padding: 25px;
-        color: @textBlue;
+        
     }
 
     .teamCardsBox {
@@ -66,7 +64,7 @@
                 }
 
                 p {
-                    .paragraphStyle(justify);
+                .paragraphStyle(justify);
 
                 }
 
@@ -87,12 +85,10 @@
             @media @desktop {
                 text-align: left;
                 flex-direction: row;
-                // background-color: #FE4909;
             }
             @media @tabletx { 
                 text-align: left;
-                flex-direction: row;
-                // background-color: #FE4909;
+                flex-direction: row; 
             }
 
         }

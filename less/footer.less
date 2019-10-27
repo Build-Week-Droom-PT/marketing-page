@@ -6,14 +6,16 @@ footer {
     left: 0px;
     right: 0;
 
+    display: flex;
+    justify-content: center;
+
     .footer {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        .flexDisplay(row, left, null);
+        margin-left: 20px;
         align-items: center;
         text-align: center;
         .copy-right {
-            color: @darkBlue;
+            color: @darkGray3;
             font-size: 20px;
           }
           .fa {

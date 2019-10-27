@@ -199,22 +199,35 @@ body section {
   -moz-box-shadow: 10px 10px;
   box-shadow: 10px 10px;
 }
+.hearSoon {
+  font-size: 30px;
+  font-family: 'Muli', sans-serif;
+  font-weight: bolder;
+  text-align: center;
+  color: #2C3A74;
+  padding: 40px;
+  background-color: white;
+}
 footer {
   width: 100%;
   background-color: #E1E6F9;
   position: absolute;
   left: 0px;
   right: 0;
+  display: flex;
+  justify-content: center;
 }
 footer .footer {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
+  align-content: null;
+  margin-left: 20px;
   align-items: center;
   text-align: center;
 }
 footer .footer .copy-right {
-  color: #1f2852;
+  color: #6F789C;
   font-size: 20px;
 }
 footer .footer .fa {
@@ -520,17 +533,20 @@ header button:hover {
   padding: 20px;
 }
 .aboutApp .aboutTextBox p {
-  text-align: center;
-  color: #2C3A74;
-  font-family: 'Muli', sans-serif;
   font-size: 30px;
-}
-.aboutApp .aboutTextBox h2 {
-  font-size: 40px;
   font-family: 'Muli', sans-serif;
   font-weight: bolder;
   text-align: center;
   color: #2C3A74;
+  font-weight: null;
+}
+.aboutApp .aboutTextBox h2 {
+  font-size: 30px;
+  font-family: 'Muli', sans-serif;
+  font-weight: bolder;
+  text-align: center;
+  color: #2C3A74;
+  font-size: 40px;
 }
 .aboutApp .aboutTextBox .fa {
   position: absolute;
@@ -557,8 +573,10 @@ header button:hover {
   list-style-position: inside;
 }
 .aboutApp .aboutTextBox ul li {
+  font-size: 18px;
   font-family: 'Muli', sans-serif;
-  font-size: 20px;
+  color: #6F789C;
+  text-align: left;
 }
 .aboutApp .appImgs {
   display: flex;
@@ -581,9 +599,9 @@ header button:hover {
     width: 100%;
     display: flex;
     flex-direction: row;
-    flex-flow: wrap;
-    align-content: center;
     justify-content: center;
+    align-content: center;
+    flex-flow: wrap;
   }
 }
 .aboutApp .appImgs .test .about {
@@ -615,12 +633,13 @@ header button:hover {
   transform: scale(1.1);
 }
 .teamContainer h2 {
-  text-align: center;
-  font-size: 40px;
+  font-size: 30px;
   font-family: 'Muli', sans-serif;
   font-weight: bolder;
-  padding: 25px;
+  text-align: center;
   color: #2C3A74;
+  font-size: 40px;
+  padding: 25px;
 }
 .teamContainer .teamCardsBox {
   width: 100%;
