@@ -420,7 +420,7 @@ header button:hover {
   color: whitesmoke;
   text-align: left;
   line-height: 1.5;
-  margin-bottom: 100px;
+  margin: auto;
   padding-top: 150px;
   text-shadow: 2px 2px slategray;
   font-size: 3.5rem;
@@ -448,6 +448,7 @@ header button:hover {
   text-align: center;
   text-shadow: thistle 1px 1px;
   font-weight: bolder;
+  margin: auto;
 }
 @media (min-width:1000px) {
   #home p {
@@ -459,6 +460,7 @@ header button:hover {
   font-size: 3rem;
   display: flex;
   flex-direction: column;
+  margin: auto;
 }
 @media (min-width:1000px) {
   #home #input {
