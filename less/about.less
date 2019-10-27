@@ -7,18 +7,15 @@
         padding: 20px;
 
         p {
-            text-align: center;
-            color:@textBlue;
-            font-family: @font-Muli;
-            font-size: 30px;
+            .headingStyle() ;
+            font-weight: null;
+           
         }
 
         h2 {
+            .headingStyle() ;
             font-size: 40px;
-            font-family: @font-Muli;
-            font-weight: bolder;
-            text-align: center;
-            color:@textBlue;
+            
         }
 
 
@@ -51,8 +48,8 @@
             list-style-position: inside;
 
             li {
-                font-family: @font-Muli;
-                font-size: 20px;
+                .paragraphStyle(left);
+                
             }
         }
 
@@ -78,11 +75,8 @@
                 white-space: wrap;
                 overflow-y: visible;
                 width: 100%;
-                display: flex;
-                flex-direction: row;
+                .flexDisplay(row, center, center);
                 flex-flow: wrap;
-                align-content: center;
-                justify-content: center;
             }
 
 
