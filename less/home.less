@@ -10,6 +10,10 @@
 
         align-items: center;
 
+        @media @desktop {
+            align-items: flex-start;
+        }
+
     h1 {
         color: whitesmoke;
         text-align: left;
@@ -21,11 +25,9 @@
 
         @media @desktop {
             font-size: 5rem;
-            width: 42%;
             text-align: left;
-            margin-bottom: 100px;
-            padding-left: 50px;
-            margin-top: -200px;
+            margin: auto 50px;
+            width: 50%;
         }
 
         @media @tabletx {
@@ -48,10 +50,9 @@
         font-weight: bolder;
 
         @media @desktop {
-        margin-left: 50px;
         text-align: left;
-        width: 38%;
-        margin-bottom: auto;
+        // width: 38%;
+        margin: auto 50px;
         }
     }
 
@@ -61,15 +62,7 @@
         flex-direction: column;
 
         @media @desktop {
-            align-items: center;
-        }
-
-        @media @desktopBug {
-            margin-left: 6%;
-        }
-
-        @media @desktopBugTwo {
-            margin-left: 14vw;
+            margin: 0 auto;
         }
 
         #inputText {
@@ -129,16 +122,4 @@
         }
 
     }
-
-    @media @desktopBug {
-        align-items: start;
-        flex-wrap: wrap;
-        
-    }
-
-    @media @desktop {
-        align-items: start;
-        flex-direction: row;
-    }
-
 }
