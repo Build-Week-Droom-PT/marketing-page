@@ -1,0 +1,124 @@
+#home {
+    height: 100vh;
+    background-image: url('../images/background.png');
+    background-position: center center;
+    background-size: cover;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+        align-items: center;
+
+        @media @desktop {
+            align-items: flex-start;
+        }
+
+    h1 {
+        color: whitesmoke;
+        text-align: left;
+        line-height: 1.5;
+        margin-bottom: 100px;
+        padding-top: 150px;
+
+        text-shadow: 2px 2px slategray;
+
+        @media @desktop {
+            font-size: 5rem;
+            text-align: left;
+            margin: auto 50px;
+            width: 50%;
+        }
+
+        @media @tabletx {
+            margin-bottom: 100px;
+        }
+
+        font-size: 3.5rem;
+        width: 100%;
+        text-align: center;
+        font-weight: bolder;
+    
+    }
+
+    p {
+        font-style: oblique;
+        color: @textBlue;
+        font-size: 2.5rem;
+        text-align: center;
+        text-shadow: thistle 1px 1px;
+        font-weight: bolder;
+
+        @media @desktop {
+        text-align: left;
+        margin: auto 50px;
+        }
+    }
+
+    #input {
+        font-size: 3rem;
+        display: flex;
+        flex-direction: column;
+
+        @media @desktop {
+            margin: 0 auto;
+        }
+
+        #inputText {
+            display: flex;
+            justify-content: space-between;
+            margin: 100px 40% 20px 0;
+            color: white;
+
+            @media @desktop {
+                margin-right: 50%;
+            }
+
+            #what, #where{
+                font-size: 2rem;
+            }
+        }
+
+        #whatSel, #whereSel, #join {
+            height: 60px;
+            border: none;
+            font-family: @font-Muli;
+            color: gray;
+
+            @media @desktop{
+            font-size: 2rem;
+            }
+        }
+
+        #search {
+            display: flex;
+            width: 80%;
+        }
+
+        #whatSel {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            padding-left: 20px;
+        }
+
+        #whereSel {
+            border-left: 1px solid silver;
+            border-right: 1px solid silver;
+            padding-left: 20px;
+        }
+
+        #join {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-weight: bold;
+            background-color: @darkBlue;
+            color: white;
+
+            @media @desktop {
+            font-size: 2.5rem;
+            padding: 0 30px;
+            }
+        }
+
+    }
+}

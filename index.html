@@ -1,48 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Droom</title>
 
     <link href='css/index.css' rel='stylesheet'>
-</head>
-<body>
-    <section id='home'>
-        <!-- background -->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <!-- Javascript -->
+        <script>
+            // Hamburger Animation
+            $(document).ready(function() {
+                    $(document).delegate('.open', 'click', function(event){
+                        $(this).addClass('oppenned');
+                        event.stopPropagation();
+                })
+                $(document).delegate('body', 'click', function(event) {
+                    $('.open').removeClass('oppenned');
+                })
+                $(document).delegate('.cls', 'click', function(event){
+                    $('.open').removeClass('oppenned');
+                    event.stopPropagation();
+                });
+            });
+
+
+            //scroll snap
+            const init = function(){
+                let items = document.querySelectorAll('section');
+                for (let i = 0; i < items.length; i++){
+                    items[i].style.background = randomColor({luminosity: 'light'});
+                }
+                cssScrollSnapPolyfill()
+            }
+            init();
+        </script>
+    </head>
+    
+    <body>
+
+        <section class='midnight' id='home'>
+            <header>
+                <a href=#home javascript:void(0)><img id='logo' src="images/Logo.png" alt="Droom Logo"></a>
+
+                <div class="spacer">
+                    <a href="https://hungry-davinci-07e745.netlify.com/"><button>LOG IN</button></a>
+
+                    <div  class="open">
+                    <span class="cls"></span>
+                    <span>
+                        <ul class="sub-menu ">
+                            <li>
+                                <a href="#home" id='firstItem'>Home</a>
+                            </li>
+                            <li>
+                                <a href="#about">About</a>
+                            </li>
+                            <li>
+                                <a href="#team">Our Team</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </span>
+                    <span class="cls"></span>
+                </div>
+                
+                </div>
+
+    
+            </header>
+
+            <a href="#main-menu-toggle" class="backdrop" hidden></a>
+
+            <div id='intro'>
+                <h1>Find your dream job by swiping right.</h1>
+    
+                <p>See how by messaging your match.</p>
+            </div>
+    
+            <div id="input">
+                <div id="inputText">
+                    <h3 id='what'>What</h3>
+                    
+                    <h3 id='where'>Where</h3>
+                </div>
+
+                <form action="" id='search'>
+                    <select name="job" id="whatSel">
+                        <option value="">Job title, skill or company</option>
+                    </select>
+
+                    <select name="" id="whereSel">
+                        <option value="">Town, city or zipcode</option>
+                    </select>
+                    <a href="https://hungry-davinci-07e745.netlify.com/"><input type="submit" value='Join Droom' id='join'></a>
+                </form>
+            </div>
+        </section>
         
-        <header>
-        <!-- logo
-        Login Button
-        hamburger menu -->
-        </header>
+        <section class="aboutApp" id='about'>
 
-        <div>
-            <!-- title
-            paragraph
-            2 inputs
-            button -->
-        </div>
-    </section>
+            <div class=appImgs>
+                <div class="test">
+                    <div class="homeImg about">
+                        <img src="images/DroomHomepage.png">
+                    </div>
+                    <div class="likeImg about">
+                        <img src="images/like.png">
+                    </div>
+                    <div class=" dislikeImg about">
+                        <img src="images/dislike.png">
+                    </div>
+                    <div class=" messagesImg about">
+                        <img src="images/messages.png">
+                    </div>
+                    <div class="chatImg about">
+                        <img src="images/chat.png">
+                    </div>
+                </div>
+            </div>
 
-    <section id='about'>
+            <div class="aboutTextBox">
+                <p> Our app helps to match employers and job seekers who are mutually
+                    interested in extending the conversation to explore the potential
+                    future of a business relationship.
+                </p>
 
-    </section>
+                <br />
 
-    <section id='team'>
+                <h2>About App</h2>
 
-    </section>
+                <i style="font-size:40px" class="fa">&#xf054;</i>
+                <ul class="transform-active">
+                    <li>People are always looking for jobs.</li>
+                    <li>The recruitment business is an invaluable industry.</li>
+                    <li>The recruitment and technology industries together is ingenious.</li>
+                    <li>Using ideas from companies like Tinder and LinkedIn is a great idea -
+                        because they work.</li>
+                </ul>
 
-    <section id='contact'>
+            </div>
+        </section>
+        <hr>
+        <section class="teamContainer" id='team'>
+            <h2>Meet the team</h2>
+            <div class="teamCardsBox">
+                <div class="cardA card">
+                    <div class="memberPhoto">
+                        <img src="images/jessharrison83.jpeg" alt="Jess Berler">
+                    </div>
+                    <div class="memberInfo">
+                        <h3>Jess Berler</h3>
+                        <p>Project Lead</p>
+                        <p>I began teaching myself Javascript as a hobby over a year ago and it has opened the door to possibilities I couldn't imagine. I am amazed by the magic of code daily, and I am ready for the opportunity to join the skills I've learned during my career in management and the magic I've learned from Lambda School. </p>
+                        <div class="socialLinks">
+                            <a href="https://github.com/jessharrison83" class="fa">&#xf09b;</a>
+                            <a href="https://www.linkedin.com/in/jessica-harrison-2018/" class="fa">&#xf08c;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardB card">
+                    <div class="memberPhoto">
+                        <img src="images/Th5tch3r.png" alt="Thatcher Phan">
+                    </div>
+                    <div class="memberInfo">
+                            <h3>Thatcher Phan</h3>
+                            <p>Front End Developer</p>
+                            <p>My name is Thatcher and I am a full stack developer. I have decided to become a full stack
+                                developer when I had my first ever class of computer fundamental during high school. Being
+                                so fascinated about how a few line of codes can pull in such magic was what made me seek out
+                                for more exposures from web development and I have fell in love with coding ever since.</p>
+                            <div class="socialLinks">
+                                <a href="https://github.com/Th5tch3r" class="fa">&#xf09b;</a>
+                                <a href="#" class="fa">&#xf08c;</a>
+                            </div>
+                        </div>
+                </div>
+                <div class="cardA card">
+                    <div class="memberPhoto">
+                        <img src="images/FreedomWriter.jpeg" alt="Natalie Davis">
+                    </div>
+                    <div class="memberInfo">
+                        <h3>Natalie Davis</h3>
+                        <p>Front End Developer</p>
+                        <p>I'm a full stack developer with a passion for figuring it out. I am particularly interested
+                            in solving human problems through technology. Building a better world is a lofty goal, but
+                            hey, we all have to shoot for something, amirite?</p>
+                        <div class="socialLinks">
+                            <a href="https://github.com/FreedomWriter" class="fa">&#xf09b;</a>
+                            <a href="https://www.linkedin.com/in/natalie-davis-64111595/" class="fa">&#xf08c;</a>
+                        </div>
+                    </div>
+                </div>
 
-    </section>
+                <div class="cardB card">
+                    <div class="memberPhoto"> <img src="images/timslack.png" alt="Tim Jeffries"> </div>
+                    <div class="memberInfo">
+                            <h3>Tim Jeffries</h3>
+                            <p>Front End Developer</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                galley of type and scrambled it to make a type specimen book.</p>
+                            <div class="socialLinks">
+                                <a href="https://github.com/TimRexJeff" class="fa">&#xf09b;</a>
+                                <a href="https://www.linkedin.com/in/tim-jeffries-0519a099/" class="fa">&#xf08c;</a>
+                            </div>
+                        </div>
+                </div>
+                <div class="cardA card">
+                    <div class="memberPhoto"> <img src="images/anatulea.jpeg" alt="Ana Tulea"></div>
+                    <div class="memberInfo">
+                        <h3>Ana Tulea</h3>
+                        <p>Web UI developer</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book.</p>
+                        <div class="socialLinks">
+                            <a href="https://github.com/anatulea" class="fa">&#xf09b;</a>
+                            <a href="https://www.linkedin.com/in/ana-tulea-8b800a170/" class="fa">&#xf08c;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardB card">
+                    <div class="memberPhoto"> <img src="images/midnight-hunt.jpeg" alt="Midnight Asensi"></div>
+                    <div class="memberInfo">
+                            <h3>Midnight Asensi</h3>
+                            <p>Web UI developer</p>
+                            <p> I have wanted to be a developer since highschool. I took one class that required us to create a ping pong game using Java and immediately fell in love with the feeling of seeing what was once an impossible, hair pulling puzzle turn into a beautiful, functioning program.</p>
+                            <div class="socialLinks">
+                                <a href="https://github.com/midnight-hunt" class="fa">&#xf09b;</a>
+                                <a href="#" class="fa">&#xf08c;</a>
+                            </div>
+                        </div>
+                </div>
 
-    <footer>
+                <div class="cardA card">
+                    <div class="memberPhoto"> <img src="images/jada.jpeg" alt="Jada White"></div>
+                    <div class="memberInfo">
+                        <h3>Jada White</h3>
+                        <p>UX Designer</p>
+                        <p>I am a UX designer who’s main interest is creating a seamless user-centered experience
+                            through extensive research and design. Ensuring that the functionality and design of a
+                            product targets the user’s needs is not just my job - it’s something I’m very passionate
+                            about.</p>
+                        <div class="socialLinks">
+                            <a href="https://github.com/jaywhite010" class="fa">&#xf09b;</a>
+                            <a href="https://www.linkedin.com/in/jada-white014/" class="fa">&#xf08c;</a>
+                        </div>
+                    </div>
+                </div>
 
-    </footer>
+            </div>
+
+        </section>
+
+        <section class='midnight' id='contact'>
+            <div id="contactText">
+                <h3>Contact Us</h3>
+
+                <p>Got a question? We'd love to hear from you. Drop us a message and we'll get back to you as soon as possible.</p>
+            </div>
+
+            <form action='' method='post'>
+                <fieldset>
+                        Name<br>
+                        <input type="text" name='name'>
+                        
+                        <br>Email*<br>
+                        <input type="text" name='email'>
+                        
+                        <br>Message*<br>
+                        <input type="text" name='message' id='message'>
+
+                        <br><input type="submit" value='Send Message' id='submit'>
+                </fieldset>
+            </form>
+        </section>
+
+        <footer>
+            <div class=" footer">
+                <span class="copy-right">© Droom 2019</span>
+                <a href="https://github.com/Build-Week-Droom-PT" class="fa fa-github"></a>
+            </div>
+        </footer>
+    </div>
 </body>
+
 </html>
