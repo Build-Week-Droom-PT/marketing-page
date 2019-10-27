@@ -407,7 +407,6 @@ header button:hover {
   background-position: center center;
   background-size: cover;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
 }
@@ -448,7 +447,7 @@ header button:hover {
   text-align: center;
   text-shadow: thistle 1px 1px;
   font-weight: bolder;
-  margin: auto;
+  margin: 50px auto;
 }
 @media (min-width:1000px) {
   #home p {
@@ -460,7 +459,7 @@ header button:hover {
   font-size: 3rem;
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin: 0 auto;
 }
 @media (min-width:1000px) {
   #home #input {
